@@ -1,5 +1,4 @@
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
-import 'package:app/screens/leading_bike.dart';
 // import 'package:app/screens/dashboard_screen.dart';
 import 'package:app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -13,8 +12,7 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: FlutterSplashScreen(
         duration: const Duration(seconds: 5),
-        // nextScreen: const LoginScreen(),
-        nextScreen: const LeadingBike(),
+        nextScreen: const LoginScreen(),
         // backgroundColor: Colors.white,
         splashScreenBody: Center(
           child: Lottie.asset(
