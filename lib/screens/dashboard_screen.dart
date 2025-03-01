@@ -45,13 +45,22 @@ class DashboardScreen extends StatelessWidget {
             ),
             ListTile(
               onTap: () {
-                Navigator.pushNamed(context, '/bike_product');
+                Navigator.pushNamed(context, '/bike');
               },
               leading: Icon(Icons.design_services_rounded),
               title: Text("Práctica Figma"),
               subtitle: Text("Frontend App"),
               trailing: Icon(Icons.charging_station_rounded),
-            )
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, '/todo');
+              },
+              leading: Icon(Icons.task_alt_sharp),
+              title: Text("Todo App"),
+              subtitle: Text("Task list"),
+              trailing: Icon(Icons.event_available_rounded),
+            ),
           ],
         ),
       ),

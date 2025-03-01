@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
           image: DecorationImage(
             opacity: .8,
             fit: BoxFit.cover,
-            image: AssetImage("fondo.jpg") 
+            image: AssetImage("assets/fondo.jpg") 
           )
         ),
         child: Stack(
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Positioned(
                 top: 230,
-                child: Lottie.asset("tecnmjson.json", height: 150)
+                child: Lottie.asset("assets/tecnmjson.json", height: 150)
               ),
               Positioned(
                 bottom: 50,
@@ -91,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         //   context, 
                         //   MaterialPageRoute(builder: (context) => ListStudentsScreen(),)
                         // ),
-                        child: Image.asset("start.png", height: 70, scale: 0.5,)
+                        child: Image.asset("assets/start.png", height: 70, scale: 0.5,)
                       ),
                     ],
                   ),

@@ -34,7 +34,7 @@ class TaskDatabase {
             titleTodo varchar(33),
             dsctodo varchar(100),
             dateTodo char(10),
-            statusTodo boolean,
+            statusTodo boolean
           )''';
         db.execute(query);
       },

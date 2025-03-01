@@ -40,6 +40,7 @@ dependencies:
   theme_button: ^1.0.4
   sqflite: ^2.4.1
   path_provider: ^2.1.5
+  intl: ^0.20.2
   # Paquetes usados para la práctica 1
   # crystal_navigation_bar: ^1.0.2
   curved_navigation_bar: ^1.0.6

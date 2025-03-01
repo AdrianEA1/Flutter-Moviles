@@ -4,6 +4,7 @@ import 'package:app/screens/landing_product.dart';
 import 'package:app/screens/list_students_screen.dart';
 import 'package:app/screens/shopping_cart.dart';
 import 'package:app/screens/splash_screen.dart';
+import 'package:app/screens/todo_screen.dart';
 import 'package:app/utils/global_value.dart';
 import 'package:flutter/material.dart';
 
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
       valueListenable: GlobalValue.themeApp,
       builder: (context, value, child) {
         return MaterialApp(
-            theme: value,
+            // theme: value,
             routes: {
               "/list": (context) => ListStudentsScreen(),
               "/dash": (context) => DashboardScreen(),
+              "/todo": (context) => TodoScreen(),
               "/bike": (context) => LeadingBike(),
               "/bike_product": (context) => LeadingProduct(),
               "/shop_bike": (context) => ShoppingCart()

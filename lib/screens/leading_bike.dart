@@ -45,30 +45,34 @@ class _LeadingBikeState extends State<LeadingBike> {
         padding: EdgeInsets.all(20),
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(color: const Color(0xFF242C3B),
-          // image: DecorationImage(image: AssetImage("assets/Rectangle.png"), fit: BoxFit.cover),
+          image: DecorationImage(image: AssetImage("assets/Rectangle.png"), fit: BoxFit.cover),
         ),
         child: ListView(
           shrinkWrap: true,
           children: [
-            ClipPath(
-              clipper: SlantedCornerClipper(),
-              child: Container(
-                height: 230,
-                width: MediaQuery.of(context).size.width,
-                // margin: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(54, 196, 196, 196),
-                  // color: Color.fromARGB(143, 177, 21, 21),
-                  borderRadius: BorderRadiusDirectional.only(
-                    topStart: Radius.circular(20),
-                    topEnd: Radius.circular(20),
-                    ),
-                    
-                ),
-                child: ListTile(
-
-                  title: Image(image: AssetImage("assets/ElectricBicycle2.png"),),
-                  subtitle: Text("30% Off", style: TextStyle(color: Color.fromARGB(195, 162, 165, 170), fontSize: 30, fontWeight: FontWeight.w600),),
+            SizedBox(
+              // height: 250,
+              width: 250,              
+              child: ClipPath(
+                clipper: SlantedCornerClipper(),
+                child: Container(
+                  height: 230,
+                  width: MediaQuery.of(context).size.width,
+                  // margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(54, 196, 196, 196),
+                    // color: Color.fromARGB(143, 177, 21, 21),
+                    borderRadius: BorderRadiusDirectional.only(
+                      topStart: Radius.circular(20),
+                      topEnd: Radius.circular(20),
+                      ),
+                      
+                  ),
+                  child: ListTile(
+              
+                    title: Image(image: AssetImage("assets/ElectricBicycle2.png"),),
+                    subtitle: Text("30% Off", style: TextStyle(color: Color.fromARGB(195, 162, 165, 170), fontSize: 30, fontWeight: FontWeight.w600),),
+                  ),
                 ),
               ),
             ),
