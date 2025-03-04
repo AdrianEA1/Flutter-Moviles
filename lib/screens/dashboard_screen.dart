@@ -1,11 +1,50 @@
+import 'dart:io';
+
 import 'package:app/utils/global_value.dart';
 import 'package:app/utils/theme_settings.dart';
 import 'package:dark_light_button/dark_light_button.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 // import 'package:app/utils/global_value.dart';
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
+
+  @override
+  State<DashboardScreen> createState() => _DashboardScreenState();
+}
+
+class _DashboardScreenState extends State<DashboardScreen> {
+  String _userName = "";
+  String _email = "";
+  String _image = "";
+
+  void _loadSaveData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _userName = prefs.getString("name")!;
+      _email = prefs.getString("email")!;
+      _image = prefs.getString("avatar")!;
+    });
+    print("Estos son: $_email, $_userName, $_image");
+  }
+
+  Future<void> _saveSession() async{
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    await prefs.setBool("session", false);
+
+    Navigator.pushNamedAndRemoveUntil(
+      context, 
+      "/login", 
+      (route) => false);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSaveData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +76,18 @@ class DashboardScreen extends StatelessWidget {
         child: ListView(
           children: [
             UserAccountsDrawerHeader(
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: NetworkImage("https://i.pravatar.cc/550"),
+              // currentAccountPicture: CircleAvatar(
+              //   // backgroundImage: NetworkImage("https://i.pravatar.cc/550"),
+              //   backgroundImage: Image.file(File(_image)),
+                
+              // ),
+              currentAccountPicture: Container(
+                height: 50,
+                width: 50,
+                child: Image.file(File(_image)),
               ),
-              accountName: Text("Adrián Estrada"),
-              accountEmail: Text("21030975@itcelaya.edu.mx")
+              accountName: Text(_userName),
+              accountEmail: Text(_email)
             ),
             ListTile(
               onTap: () {
@@ -61,10 +107,39 @@ class DashboardScreen extends StatelessWidget {
               subtitle: Text("Task list"),
               trailing: Icon(Icons.event_available_rounded),
             ),
+            ElevatedButton(
+              onPressed: () => {
+                _saveSession()
+              }, 
+              child: Row(
+                children: [
+                  Text(
+                    "Cerrar sesión",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 103, 103, 117),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500
+                    ),
+                  ),
+                  Icon(
+                    Icons.logout,
+                    color: Color.fromARGB(255, 103, 103, 117),
+                    size: 16,
+
+                  )
+                ],
+              ))
           ],
         ),
       ),
       // endDrawer: Drawer(),
+      body: Center(
+        child: Column(
+          children: [
+
+          ],
+        ),
+      ),
     );
   }
 }

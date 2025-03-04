@@ -2,6 +2,8 @@ import 'package:app/screens/dashboard_screen.dart';
 import 'package:app/screens/leading_bike.dart';
 import 'package:app/screens/landing_product.dart';
 import 'package:app/screens/list_students_screen.dart';
+import 'package:app/screens/login_screen.dart';
+import 'package:app/screens/register_screen.dart';
 import 'package:app/screens/shopping_cart.dart';
 import 'package:app/screens/splash_screen.dart';
 import 'package:app/screens/todo_screen.dart';
@@ -24,9 +26,11 @@ class MyApp extends StatelessWidget {
               "/list": (context) => ListStudentsScreen(),
               "/dash": (context) => DashboardScreen(),
               "/todo": (context) => TodoScreen(),
+              "/login": (context) => LoginScreen(),
               "/bike": (context) => LeadingBike(),
               "/bike_product": (context) => LeadingProduct(),
-              "/shop_bike": (context) => ShoppingCart()
+              "/shop_bike": (context) => ShoppingCart(),
+              "/regis_user": (context) => RegisterScreen(),
             },  
             title: "Material App",
             home: SplashScreen()
