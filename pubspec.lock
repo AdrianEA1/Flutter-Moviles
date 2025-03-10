@@ -17,6 +17,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.4"
+  art_sweetalert:
+    dependency: "direct main"
+    description:
+      name: art_sweetalert
+      sha256: "64dd68fc8648197e2b8201b3d28e2e9ec41c0883a05e18be21386ec6435d2b54"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   async:
     dependency: transitive
     description:
@@ -33,62 +41,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
-  camera:
-    dependency: "direct main"
-    description:
-      name: camera
-      sha256: "413d2b34fe28496c35c69ede5b232fb9dd5ca2c3a4cb606b14efc1c7546cc8cb"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.11.1"
-  camera_android_camerax:
-    dependency: transitive
-    description:
-      name: camera_android_camerax
-      sha256: afdea63d66cce01cee6d56443a9d62f10dd58678c403cec78affff6fb52c6482
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.6.14"
-  camera_avfoundation:
-    dependency: transitive
-    description:
-      name: camera_avfoundation
-      sha256: "1eeb9ce7c9a397e312343fd7db337d95f35c3e65ad5a62ff637c8abce5102b98"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.9.18+8"
-  camera_platform_interface:
-    dependency: transitive
-    description:
-      name: camera_platform_interface
-      sha256: "953e7baed3a7c8fae92f7200afeb2be503ff1a17c3b4e4ed7b76f008c2810a31"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.9.0"
-  camera_web:
-    dependency: transitive
-    description:
-      name: camera_web
-      sha256: "595f28c89d1fb62d77c73c633193755b781c6d2e0ebcd8dc25b763b514e6ba8f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.3.5"
-  camerawesome:
-    dependency: "direct main"
-    description:
-      name: camerawesome
-      sha256: "3619d5605fb14ab72c815532c1d9f635512c75df07b5a742b60a9a4b03b6081e"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.0"
-  carousel_slider:
-    dependency: transitive
-    description:
-      name: carousel_slider
-      sha256: "7b006ec356205054af5beaef62e2221160ea36b90fb70a35e4deacd49d0349ae"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.0.0"
   characters:
     dependency: transitive
     description:
@@ -113,14 +65,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.19.0"
-  colorfilter_generator:
-    dependency: transitive
-    description:
-      name: colorfilter_generator
-      sha256: ccc2995e440b1d828d55d99150e7cad64624f3cb4a1e235000de3f93cf10d35c
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.8"
   cross_file:
     dependency: transitive
     description:
@@ -230,6 +174,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_expandable_fab:
+    dependency: "direct main"
+    description:
+      name: flutter_expandable_fab
+      sha256: "85275279d19faf4fbe5639dc1f139b4555b150e079d056f085601a45688af12c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -280,14 +232,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.2"
-  image:
-    dependency: transitive
-    description:
-      name: image
-      sha256: "13d3349ace88f12f4a0d175eb5c12dcdd39d35c4c109a8a13dfeb6d0bd9e31c3"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.5.3"
   image_picker:
     dependency: "direct main"
     description:
@@ -416,14 +360,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.11.1"
-  matrix2d:
-    dependency: transitive
-    description:
-      name: matrix2d
-      sha256: "188718dd3bc2a31e372cfd0791b0f77f4f13ea76164147342cc378d9132949e7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.4"
   meta:
     dependency: transitive
     description:
@@ -560,14 +496,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.0"
-  petitparser:
-    dependency: transitive
-    description:
-      name: petitparser
-      sha256: c15605cd28af66339f8eb6fbe0e541bfe2d1b72d5825efc6598f3e0a31b9ad27
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.0.2"
   platform:
     dependency: transitive
     description:
@@ -600,14 +528,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.5"
-  rxdart:
-    dependency: transitive
-    description:
-      name: rxdart
-      sha256: "5c3004a4a8dbb94bd4bf5412a4def4acdaa12e12f269737a5751369e12d1a962"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.28.0"
   shared_preferences:
     dependency: "direct main"
     description:
@@ -749,14 +669,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
-  stream_transform:
-    dependency: transitive
-    description:
-      name: stream_transform
-      sha256: ad47125e588cfd37a9a7f86c7d6356dde8dfe89d071d293f80ca9e9273a33871
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.1"
   string_scanner:
     dependency: transitive
     description:
@@ -845,14 +757,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
-  xml:
-    dependency: transitive
-    description:
-      name: xml
-      sha256: b015a8ad1c488f66851d762d3090a21c600e479dc75e68328c52774040cf9226
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.5.0"
 sdks:
   dart: ">=3.6.1 <4.0.0"
   flutter: ">=3.27.0"

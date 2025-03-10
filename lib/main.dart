@@ -15,13 +15,15 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
       valueListenable: GlobalValue.themeApp,
       builder: (context, value, child) {
         return MaterialApp(
-            // theme: value,
+            theme: value,
+            
             routes: {
               "/list": (context) => ListStudentsScreen(),
               "/dash": (context) => DashboardScreen(),

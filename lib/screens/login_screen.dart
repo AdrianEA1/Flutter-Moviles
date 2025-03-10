@@ -20,14 +20,13 @@ class _LoginScreenState extends State<LoginScreen> {
 
   String? _userName;
   String? _userPsw;
-  bool? _userSsn;
+  // bool? _userSsn;
 
   Future<void> _loadSaveData2() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       _userName = prefs.getString("name");
       _userPsw = prefs.getString("psw");
-      _userSsn = prefs.getBool("session") ?? false;
     });
   }
 
@@ -48,32 +47,32 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final txtUser = TextFormField(
-      controller: contrUser,
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return 'Ingrese un nombre';
-        }
-        _user = value;
-        return null;
-      },
-      decoration: InputDecoration(
-          border: OutlineInputBorder(), hintText: "Introduce el usuario"),
-    );
+    // final txtUser = TextFormField(
+    //   controller: contrUser,
+    //   validator: (value) {
+    //     if (value == null || value.isEmpty) {
+    //       return 'Ingrese un nombre';
+    //     }
+    //     _user = value;
+    //     return null;
+    //   },
+    //   decoration: InputDecoration(
+    //       border: OutlineInputBorder(), hintText: "Introduce el usuario"),
+    // );
 
-    final txtPass = TextFormField(
-      controller: contrPsw,
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return 'Ingrese la contraseña';
-        }
-        _psw = value;
-        return null;
-      },
-      obscureText: true,
-      decoration: InputDecoration(
-          border: OutlineInputBorder(), hintText: "Introduce la contraseña"),
-    );
+    // final txtPass = TextFormField(
+    //   controller: contrPsw,
+    //   validator: (value) {
+    //     if (value == null || value.isEmpty) {
+    //       return 'Ingrese la contraseña';
+    //     }
+    //     _psw = value;
+    //     return null;
+    //   },
+    //   obscureText: true,
+    //   decoration: InputDecoration(
+    //       border: OutlineInputBorder(), hintText: "Introduce la contraseña"),
+    // );
 
     return Scaffold(
       body: Container(
@@ -157,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 } else {
                                   _holdSession = false;
                                 }
-                                print(_holdSession);
+                                // print(_holdSession);
                               },
                               border: Border.all(width: 1, color: Colors.black),
                             ),
@@ -176,10 +175,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                         (value) {
                                           GlobalValue.isValidating.value = true;
                                           // isValidating = false;
-                                          print("ansdjnjinoaij $_userName");
-                                          print("hlolaaaa $_userPsw");
-                                          print("hlolaaaa $_user");
-                                          print("hlolaaaa $_psw");
+                                          // print("ansdjnjinoaij $_userName");
+                                          // print("hlolaaaa $_userPsw");
+                                          // print("hlolaaaa $_user");
+                                          // print("hlolaaaa $_psw");
                                           GlobalValue.isValidating.value =
                                               false;
                                           if (_userName == _user &&
@@ -218,7 +217,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           onPressed: () {
                             Navigator.pushNamed(context, "/regis_user").then(
                               (_) async {
-                                print("Estoy regresando");
+                                // print("Estoy regresando");
                                 await _loadSaveData2();
                               },
                             );

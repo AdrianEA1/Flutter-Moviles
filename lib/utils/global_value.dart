@@ -3,5 +3,7 @@ import 'package:flutter/material.dart';
 
 class GlobalValue {
   static ValueNotifier isValidating = ValueNotifier(false);
-  static ValueNotifier themeApp = ValueNotifier(ThemeSettings.lightTheme());
+  static ValueNotifier themeApp = ValueNotifier(ThemeData());
+  static ValueNotifier updList = ValueNotifier(false);
+  static ValueNotifier updAvatar = ValueNotifier(false);
 }
